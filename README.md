@@ -25,6 +25,7 @@ npm install --save node-exotel-whitelist
 
 node-exotel-whitelist have four methods, and four of them return promise 
 and needs a common set of parameters. That is,
+
 ```
 urlOption = {
     apiKey          : // your exotel api key.
@@ -34,11 +35,14 @@ urlOption = {
 
 require this package:
 var exotel  = require('node-exotel-whitelist');
-    **actual responses from exotel are in XML, but in this package [xml-js](https://www.npmjs.com/package/xml-js)
-    **have been used to convert those XML response in JSON.
+
 ```
+**actual responses from exotel are in XML, but in this package [xml-js](https://www.npmjs.com/package/xml-js)
+    have been used to convert those XML response in JSON.
+
 1. whiteListDetails : using it, one can check whether a number is whitelisted or not.
                       it needs two parameters, 'urlOption','phoneNumber'.  
+
 ```
     var details = exotel.whiteListDetails(urlOption, phoneNumber)
     details.then((response) => { // since it's return promise
@@ -50,6 +54,7 @@ var exotel  = require('node-exotel-whitelist');
 
 2. whiteListANumber : this one is for whitelist a number.
                       it recieves two parameters, 'urlOption' and 'numberInfo'
+
 ```
     let numberInfo = {
         VirtualNumber   : // after registration in exotel, you get a virutal number;
@@ -57,7 +62,8 @@ var exotel  = require('node-exotel-whitelist');
     }
     var whitelisted     = exotel.whiteListANumber(urlOption, phoneNumber);
     
-```                        
+```       
+
 3. removeFromNumber : this one delete a list of whitelisted number, 
                       recieves two parameters, 'urlOption' and 'arrayOfPhone'.
   
