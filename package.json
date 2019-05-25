@@ -1,0 +1,23 @@
+{
+  "name": "node-exotel-whitelist",
+  "version": "1.0.0",
+  "description": "In Exotel's system, you need to add your DND client's phone number, this process is called whitelisting. This package will be a great aid in the node environment to whitelist DND numbers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "exotel",
+    "exotel-whitelist",
+    "node-exotel",
+    "exotel-whitelist",
+    "node-exotel-whitelist",
+    "node-exotel-whitelist-status"
+  ],
+  "author": "\"Subha Chandra Das <gangulysubho5@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "xml-js": "^1.6.11"
+  }
+}
