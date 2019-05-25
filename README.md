@@ -26,14 +26,14 @@ npm install --save node-exotel-whitelist
 node-exotel-whitelist have four methods, and four of them return promise 
 and needs a common set of parameters. That is,
 
-```
+```javascript
 urlOption = {
     apiKey          : // your exotel api key.
     apiToken        : // your exotel secret api Token.
     sId             : // your sid.
 }
 
-require this package:
+//require this package:
 var exotel  = require('node-exotel-whitelist');
 
 ```
@@ -43,7 +43,7 @@ var exotel  = require('node-exotel-whitelist');
 1. whiteListDetails : using it, one can check whether a number is whitelisted or not.
                       it needs two parameters, 'urlOption','phoneNumber'.  
 
-```
+```javascript
     var details = exotel.whiteListDetails(urlOption, phoneNumber)
     details.then((response) => { // since it's return promise
         console.log(response)
@@ -55,7 +55,7 @@ var exotel  = require('node-exotel-whitelist');
 2. whiteListANumber : this one is for whitelist a number.
                       it recieves two parameters, 'urlOption' and 'numberInfo'
 
-```
+```javascript
     let numberInfo = {
         VirtualNumber   : // after registration in exotel, you get a virutal number;
         Number          : // that number you want to whitelist;
@@ -67,7 +67,7 @@ var exotel  = require('node-exotel-whitelist');
 3. removeFromNumber : this one delete a list of whitelisted number, 
                       recieves two parameters, 'urlOption' and 'arrayOfPhone'.
   
-```
+```javascript
     let arrayOfPhone = ['898XXXXXX2','7686XXXX21'];
     let removed      = exotel.removeFromWhiteList(urlOption,arrayOfPhone);
 
@@ -76,7 +76,7 @@ var exotel  = require('node-exotel-whitelist');
                     ( Telecom Circle, Telecom Circle Name, Number Type
                      Whether the number belongs to DND or not)
                     recieves two parameters, 'urlOption' and 'phoneNumber'. 
-```
+```javascript
     let phoneNumber = '898XXXXX20';
     let metaData = exotel.numberMetaData(urlOption, phoneNumber)
 
