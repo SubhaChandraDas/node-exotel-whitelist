@@ -15,8 +15,8 @@
     "node-exotel-whitelist-status"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/SubhaChandraDas/node-exotel-whitelist"
+    "type": "git",
+    "url": "https://github.com/SubhaChandraDas/node-exotel-whitelist"
   },
   "author": "\"Subha Chandra Das <gangulysubho5@gmail.com>",
   "license": "MIT",
