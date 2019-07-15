@@ -57,7 +57,7 @@ var exotel  = require('node-exotel-whitelist');
 
 ```javascript
     let numberInfo = {
-        VirtualNumber        : // after registration in exotel, you get a virutal number;
+        virtualNumber        : // after registration in exotel, you get a virutal number;
         phoneNumber          : // that number you want to whitelist;
     }
     var whitelisted     = exotel.whiteListANumber(urlOption, numberInfo);
